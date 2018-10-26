@@ -1,3 +1,11 @@
+# Testing
+
+1. Input number -> Press A -> Beeps after 12 sec -> Press B to come back to iddle -> Input number -> Countdown starts again 
+
+2. Input number>3 -> Press A -> Press C to cancel after 3 seconds -> Input number -> Countdown starts again 
+
+
+
 # A Project for the AVR - Written in Assembler Language
 
 The purpose of this assignment is to write a small software project in assembler code. The MCU to be used is the AVR ATmega2560, and the project should include some form of interaction with sensors and actuators.
