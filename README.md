@@ -1,3 +1,11 @@
+# Problem formulation
+
+//TODO
+
+# Analysis
+
+See Alarm.asta
+
 # Testing
 
 1. Input number -> Press A -> Beeps after 12 sec -> Press B to come back to iddle -> Input number -> Countdown starts again 
