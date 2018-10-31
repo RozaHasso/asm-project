@@ -1,6 +1,6 @@
 # Problem formulation
 
-The project focuses on creating a simple counting system, so that the user can input a number and ask for start countingdown, when it gets to zero the system starts beeping. 
+The project focuses on creating a simple counting timer, so that the user can input a number and ask for start countingdown, when it gets to zero the timer starts beeping. 
 The user can stop countingdown at any time to come back to the start point.
 
 The Problem Statments:
