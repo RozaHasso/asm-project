@@ -1,6 +1,14 @@
 # Problem formulation
 
-//TODO
+The project focuses on creating a simple counting timer, so that the user can input a number and ask for start countingdown, when it gets to zero the timer starts beeping. 
+The user can stop countingdown at any time to come back to the start point.
+
+The Problem Statments:
+1. What kind of components can be used in the project.
+2. What is the maximum number the user can input.
+3. How to display numbers on a screen.
+4. How the system will be designed.
+5. How to implement the system in AVR assrmbler.
 
 # Analysis
 
