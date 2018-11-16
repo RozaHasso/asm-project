@@ -1,20 +1,47 @@
-;Punem 5 v la portul b7;
+start:
 
 
-ldi r16, 3
-out ddrb, r16 
+ldi r16, 5;;countdown time
+out ddrb, r16; display time at port B
 
 
-loop:
-	out portb, r16      ; writing value to port
+;initialization for reading input from buttons
+ldi		r20, 0x00
+out		ddrc, r20
+ldi		r20, 0xff
+out     portc, r20
+
+
+;button codes
+ldi r26,0b0000_1000;stop countdown/beeping
+
+
+countdown:
+
+	;check if cancel button pressed (should hold at least 1 sec)
+	in		r25, pinc	
+    com     r25         
+	cp r25,r26
+	breq start
+
+
+	out portb, r16      ; display countdown value
     call delay          ; delaying
-	dec r16             ; decrement counter
-	brne loop           ; if counter not equals 0 jump to beginning of loop
+	dec r16             ; decrease 1 second
+	brne countdown      ; continue countdown if time>0
 
 out portb, r16
 
 
 beep:
+	
+	;check if cancel button pressed
+	in		r25, pinc	
+    com     r25       
+	cp r25,r26
+	breq start
+
+
 	ldi r22, 0b1111_1111
 	out ddra, r22
 	out porta, r22
@@ -28,7 +55,7 @@ beep:
 
 
 short_delay:
-	ldi r17, 0x10
+	ldi r17, 0x5
 sdelay_outer:
 	ldi r18, 0xff
 sdelay_inner:
