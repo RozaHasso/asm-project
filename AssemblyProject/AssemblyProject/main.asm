@@ -7,14 +7,29 @@ out ddrb, r16; display time at port B
 
 ;initialization for reading input from buttons
 ldi		r20, 0x00
-out		ddrc, r20
+out		ddrc, r20 ;set port c to input
 ldi		r20, 0xff
-out     portc, r20
+out     portc, r20 
+
+
 
 
 ;button codes
 ldi r26,0b0000_1000;stop countdown/beeping
+ldi r28,0b0000_0100;start countdown
 
+
+
+ 
+
+startloop:; include inc/dec/start(loop)
+
+in r27, pinc  ;read from port c
+com r27
+cp r27,r28
+breq countdown
+
+out portb, r16
 
 countdown:
 
