@@ -27,28 +27,43 @@ startloop:
 
 out portb, r16
 
+//increment check(see if that button is pressed or not)
 in r25, pinc
 com r25
 cp r25, r27
-breq it_is
+breq it_is //if it is pressed go to it_is
 	
+
+//if not pressed continue the following 
+//decrement check(see if that button is pressed or not)
 it_isnt:
 	in r25, pinc
 	com r25
 	cp r25, r28
-	breq it_is2 
+	breq it_is2 //if it is pressed go to it_is2
 
 
+//if not pressed continue the following 
+//start countdown check(see if that button is pressed or not)
 it_isnt2:
-
 in r25, pinc 
 com r25
 cp r25,r29
-breq countdown
+breq countdown // start countingdown( if the start button is pressed)
 
+// none of the privious buttons are pressed
 none:
 	jmp startloop
 
+// if the increment check is correct(if the increment button is pressed).... do the following (inc r16)
+it_is:
+inc r16
+call delay
+out ddrb, r16
+out portb, r16
+rjmp startloop
+
+// if the decrement check is correct(if the decrement button is pressed).... do the following (dec r16)
 it_is2:
 	dec r16
 	call delay
@@ -56,12 +71,7 @@ it_is2:
 	out portb, r16
 	rjmp startloop
 	
-it_is:
-	inc r16
-	call delay
-	out ddrb, r16
-	out portb, r16
-	rjmp startloop
+
 
  
 countdown:
