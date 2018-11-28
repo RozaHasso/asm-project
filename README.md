@@ -16,10 +16,16 @@ See Alarm.asta
 
 # Testing
 
-1. Input number -> Press A -> Beeps after 12 sec -> Press B to come back to iddle -> Input number -> Countdown starts again 
+1. By pressing two buttons: "Increment" and "Decrement" determines the input data -> set input for 2 seconds (00000010) -> 
+-> by pressing "Start" button the countdown starts -> after 2 seconds the alarm beeps -> by pressing "Cancel" button the beeping stops
+-> after this, device is ready to be used again.
 
-2. Input number>3 -> Press A -> Press C to cancel after 3 seconds -> Input number -> Countdown starts again 
+2. By pressing two buttons: "Increment" and "Decrement" determines the input data -> set input for 8 seconds (00001000) -> 
+-> by pressing "Start" button the countdown starts -> after 8 seconds the alarm beeps -> by pressing "Cancel" button the beeping stops
+-> after this, device is ready to be used again.
 
+3. By pressing two buttons: "Increment" and "Decrement" determines the input data -> set input for 5 seconds (00000101) -> 
+-> by pressing "Start" button the countdown starts -> by pressing "Cancel" button the countdown is resseting -> after this, device is ready to be used again.
 
 
 # A Project for the AVR - Written in Assembler Language
