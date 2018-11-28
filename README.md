@@ -27,6 +27,8 @@ See Alarm.asta
 3. By pressing two buttons: "Increment" and "Decrement" determines the input data -> set input for 5 seconds (00000101) -> 
 -> by pressing "Start" button the countdown starts -> by pressing "Cancel" button the countdown is resseting -> after this, device is ready to be used again.
 
+All four buttons: "Increment", "Decrement", "Start" and "Cancel" are working well.
+Display showing the values in real time with very short delay.
 
 # A Project for the AVR - Written in Assembler Language
 
